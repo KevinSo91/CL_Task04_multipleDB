@@ -1,0 +1,5 @@
+3 Datenbanken:
+
+voller Zugriff: order (primary)
+read-only: user
+read-only: product

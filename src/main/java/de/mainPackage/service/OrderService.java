@@ -16,9 +16,9 @@ public class OrderService {
 	private OrderRepository orderRepo;
 	
 	
-	public OrderService(OrderRepository orderRepo) {
-		this.orderRepo = orderRepo;
-	}
+//	public OrderService(OrderRepository orderRepo) {
+//		this.orderRepo = orderRepo;
+//	}
 	
 	
 	public Optional<Order> getOrder(int id) {
