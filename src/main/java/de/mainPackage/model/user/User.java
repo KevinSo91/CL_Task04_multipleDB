@@ -12,7 +12,7 @@ public class User {
 
 	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
+    private int user_id;
 
     private String name;
    
@@ -27,11 +27,11 @@ public class User {
 
     
 	public int getId() {
-		return id;
+		return user_id;
 	}
 
 	public void setId(int id) {
-		this.id = id;
+		this.user_id = id;
 	}
 
 	public String getName() {

@@ -29,5 +29,10 @@ public class ProductService {
 		return productRepo.findAll();
 	}
 
+
+	public Product createProduct(Product product) {		
+		return productRepo.save(product);
+	}
+
 	
 }

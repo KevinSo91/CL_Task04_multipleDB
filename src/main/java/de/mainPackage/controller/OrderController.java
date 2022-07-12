@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import de.mainPackage.model.order.Order;
 import de.mainPackage.service.OrderService;
-import de.mainPackage.service.UserService;
 
 @RestController
 @RequestMapping("/order")
