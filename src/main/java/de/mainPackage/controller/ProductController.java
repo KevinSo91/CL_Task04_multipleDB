@@ -23,12 +23,12 @@ public class ProductController {
 	
 	@GetMapping("/{product_id}")
 	public Optional<Product> getProduct(@PathVariable int product_id){
-		return this.productService.findProduct(product_id);
+		return this.productService.getProduct(product_id);
 	}
 		
 	@GetMapping("/all")
 	public List<Product> getAllProducts(){
-		return this.productService.findAllProducts();
+		return this.productService.getAllProducts();
 	}
 	
 	@PostMapping("/create")

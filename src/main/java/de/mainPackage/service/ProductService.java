@@ -21,11 +21,11 @@ public class ProductService {
 	}
 	
 	
-	public Optional<Product> findProduct(int id){
+	public Optional<Product> getProduct(int id){
 		return productRepo.findById(id);		
 	}
 	
-	public List<Product> findAllProducts(){
+	public List<Product> getAllProducts(){
 		return productRepo.findAll();
 	}
 

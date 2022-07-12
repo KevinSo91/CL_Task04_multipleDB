@@ -1,10 +1,16 @@
 package de.mainPackage.model.product;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
+
+import de.mainPackage.model.order.Order;
 
 
 @Entity
@@ -12,20 +18,30 @@ import javax.persistence.Table;
 public class Product {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int product_id;
 
     private String name;
 
     private double price;
     
+    @ManyToMany(mappedBy = "enrolledProducts")
+    private Set<Order> orders = new HashSet<>();
+        
+    
+    
+    public Product(String name, double price) {
+    	this.name = name;
+    	this.price = price;
+    }
+    
     
     public Product() {
 		// TODO Auto-generated constructor stub
 	}
-    
-    
-    public int getId() {
+
+
+	public int getId() {
 		return product_id;
 	}
 
@@ -49,10 +65,9 @@ public class Product {
 		this.price = price;
 	}
 
-	public Product(String name, double price) {
-    	this.name = name;
-    	this.price = price;
-    }
+//	public void enrollOrder(Order order) {
+//		this.orders.add(order);
+//	}
 
 	
 }
